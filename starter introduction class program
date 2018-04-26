@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+class check
+{
+	public :
+	void display()
+		{
+			cout<<"whoops"<<endl;
+			cout<<"ggwp"<<endl;
+		}
+};
+int main()
+{ 
+check *L1;
+L1->display();  //gunain -> jika deklarasinya pointer
+
+/*
+market l1;
+l1.display; //gunain . apabila deklarasinya tidak dengan pointer
+*/
+}
