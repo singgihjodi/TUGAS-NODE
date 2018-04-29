@@ -2,7 +2,7 @@
 using namespace std;
 
 class title
-{	
+{
 public :		//dont erase this,or it will be private class
 int num;
 title *temp;	
@@ -13,6 +13,7 @@ void addhead ()
 {
 	head= '\0';
 }
+
 int check ()
 {
 	if (head=='\0'){
@@ -93,12 +94,9 @@ if (!check())
 	}
 }
 
+int main(){
 
-	
-
-
-int main()
-{	int n,num;
+        int n,num;
 	addhead();	
 	cout<<"how many insert data : ";
 	cin>>n;
