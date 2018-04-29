@@ -1,0 +1,87 @@
+#include<iostream>
+using namespace std;
+
+class title
+{	
+public :		//dont erase this,or it will be private class
+int num;
+title *temp;	
+
+};
+title *head;
+void addhead ()
+{
+	head= '\0';
+}
+int check ()
+{
+	if (head=='\0'){
+	return 1;
+	}
+	else{
+	return 0;
+	}
+}
+
+void addnumb (int data)
+{
+title *tmp;
+title *help;
+	tmp = new title ();
+	 	tmp->num = data;
+	 		tmp->temp = tmp;
+			 	if (check()==1)
+				 {
+				 	head=tmp;
+				 	head->temp=head;
+						  }	 
+					else
+					{
+					help=head;
+					while(help->temp!=head)
+					{
+						help=help->temp;
+						}	
+					tmp->temp=head;
+					//head=tmp; //diapus  slashnya misal mau nambah head
+					help->temp = head;	
+						}
+	cout<<"inserted data"<<endl;
+ } 	
+
+void print ()
+{
+if (!check())
+{
+	title *help;
+	help=head;
+	do{
+		cout<<help->num<<" ";
+		help=help->temp;
+	}
+	while (help!=head);
+	}
+	else
+	{
+		cout<<"empty";
+	}
+}
+
+
+	
+
+
+int main()
+{	int n,num;
+	addhead();	
+	cout<<"how many insert data : ";
+	cin>>n;
+	for(int x=1;x<=n;x++)
+	{
+		cin>>num;
+		
+		addnumb(num);
+	}
+	print();
+	return 0;
+}
