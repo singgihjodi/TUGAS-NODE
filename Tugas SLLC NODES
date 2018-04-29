@@ -125,6 +125,33 @@ void rmvfrnt()
 		}
 }
 
+void rmvb()
+{
+	title *clear;
+	title *help;
+		if (check()==0){
+			int var;
+			clear = head;
+			if(head->temp == head){
+				head = NULL;
+			}else{
+				help = head;
+				while(help->temp->temp != head){
+					help = help->temp;
+				}
+				clear = help->temp;
+	         	var = help->num;
+				help->temp = head;
+				delete clear;
+			}
+			cout<<"deleted";
+				} 	else 
+				  {
+		  	cout<<"empty"<<endl;
+		  		}
+	}
+
+
 
 
 	
@@ -145,6 +172,7 @@ int main()
 		addnumb(num); //no.1
 	}
 	 rmvfrnt(); // no.3
+	 rmvb(); //no.4
 	 
 	
 	/*cout<<"bawah"<<endl;
