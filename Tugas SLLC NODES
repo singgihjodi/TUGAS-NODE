@@ -43,8 +43,34 @@ title *help;
 						help=help->temp;
 						}	
 					tmp->temp=head;
-					//head=tmp; //diapus  slashnya misal mau nambah head
+					head=tmp;
 					help->temp = head;	
+						}
+	cout<<"inserted data"<<endl;
+ } 	
+ 
+ void addback(int data)
+{
+title *tmp;
+title *help;
+	tmp = new title ();
+	 	tmp->num = data;
+	 		tmp->temp = tmp;
+			 	if (check()==1)
+				 {
+				 	head=tmp;
+				 	head->temp=head;
+						  }	 
+					else
+					{
+					help=head;
+					while(help->temp!=head)
+					{
+						help=help->temp;
+						}	
+					help->temp = tmp;
+					tmp->temp = head;
+						
 						}
 	cout<<"inserted data"<<endl;
  } 	
@@ -81,6 +107,14 @@ int main()
 		cin>>num;
 		
 		addnumb(num);
+	}
+	
+	cout<<"bawah"<<endl;
+	for(int x=1;x<=n;x++)
+	{
+		cin>>num;
+		
+		addback(num);
 	}
 	print();
 	return 0;
