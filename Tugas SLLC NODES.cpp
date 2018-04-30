@@ -152,11 +152,27 @@ void rmvb()
 				  {
 		  	cout<<"empty"<<endl;
 		  		}
-	}
+}
 	
-	
+void inputangka(){
+	cout<<"Masukan Banyak Angka :";
+}
 
 
 int main(){	
+	int n,num;
+	addhead();
+	
+	cout<<"==Tambah Node Depan=="<<endl;		//Nomor 1
+	inputangka();
+	cin>>n;
+	for(int x=1;x<=n;x++)
+	{
+		cin>>num;	
+		addnumb(num);			
+	}
+	print();
+	cout<<endl<<endl;
+	
 	
 }
