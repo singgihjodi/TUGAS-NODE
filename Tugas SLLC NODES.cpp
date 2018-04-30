@@ -216,5 +216,9 @@ int main(){
 	rmvfrnt();
 	print();
 	cout<<endl<<endl;
-	
+	//================================================================//
+	cout<<"==Hapus Node Belakang=="<<endl;		//Nomor 4
+	rmvb();
+	print();
+	cout<<endl<<endl;
 }
