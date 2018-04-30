@@ -160,9 +160,9 @@ void rmvb()
 int main()
 {	int n,num;
 	addhead();
-/*	addback(2);
+	addback(2);
 	addback(10);
-	addback(78); */
+	addback(78); 
 	cout<<"how many insert data : ";
 	cin>>n;
 	for(int x=1;x<=n;x++)
