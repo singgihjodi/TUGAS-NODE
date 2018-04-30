@@ -29,7 +29,7 @@ void addhead ()
 {
 	head= '\0';
 }
-Bool check ()
+bool check ()
 {
 	if (head=='\0'){
 	return true;
