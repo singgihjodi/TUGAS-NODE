@@ -153,7 +153,34 @@ void rmvb()
 		  	cout<<"empty"<<endl;
 		  		}
 }
+
+void tambah_tengah(){
+	title *tmp, *help;
+	int posisi_sisip;
+	if(head != NULL){
+		cout<<"Sisip data setelah data ke : ";
+		cin>>posisi_sisip;
+		help=head;
+		tmp=new title;
+		for (int i=1;i<posisi_sisip;i++){
+			if(help->temp != NULL){
+				help=help->temp;
+			}
+			else{
+				continue;
+			}
+		}
+		cout<<"Masukan Angka : ";
+		cin>>tmp->num;
+		tmp->temp=help->temp;
+		help->temp=tmp;
+	}
+	else{
+		cout<<"Belum Ada Data !";
+	}
 	
+}
+
 void inputangka(){
 	cout<<"Masukan Banyak Angka :";
 }
@@ -189,4 +216,5 @@ int main(){
 	rmvfrnt();
 	print();
 	cout<<endl<<endl;
+	
 }
