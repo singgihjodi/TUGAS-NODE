@@ -181,6 +181,39 @@ void tambah_tengah(){
 	
 }
 
+void hapus_tengah(){
+	int banyakdata,posisi_hapus,poshapus;
+	title *hapus, *help;
+	if(head !=NULL){
+		cout<<"Akan dihapus pada data ke :";
+		cin>>posisi_hapus;
+		banyakdata=1;
+		help=head;
+		while(help->temp != NULL){
+			help=help->temp;
+			banyakdata++;
+		}
+		if((posisi_hapus<1) || (posisi_hapus>banyakdata)){
+			cout<<"Belum ada Data !";
+		}
+		else{
+			help=head;
+			poshapus=1;
+			while(poshapus<(posisi_hapus-1)){
+				help=help->temp;
+				poshapus++;
+			}
+			hapus=help->temp;
+			help->temp=hapus->temp;
+			delete hapus;
+		}
+	}
+	else{
+		cout<<"Node Masih Kosong !!";
+	}
+}
+
+
 void inputangka(){
 	cout<<"Masukan Banyak Angka :";
 }
@@ -221,4 +254,25 @@ int main(){
 	rmvb();
 	print();
 	cout<<endl<<endl;
+	//================================================================//
+	cout<<"==Tambah Node Tengah=="<<endl;		//Nomor 5
+	inputangka();
+	cin>>n;
+	for (int i=0;i<n;i++){
+		tambah_tengah();   
+	}
+	print();
+	cout<<endl<<endl;
+	//================================================================//
+	cout<<"==Hapus Node Tengah=="<<endl;		//Nomor 6
+	inputangka();
+	cin>>n;
+	for (int i=0;i<n;i++){
+		hapus_tengah();
+		print();
+	}
+	
+	return 0;
+
+	
 }
