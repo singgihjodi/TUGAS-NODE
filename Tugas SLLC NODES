@@ -1,4 +1,19 @@
-//TUGAS-PETRUK-SLLC
+
+	
+							
+		
+				
+				 	
+				 	
+							
+					
+					
+					
+					
+					
+						
+							
+				//TUGAS-PETRUK-SLLC
 #include<iostream>
 using namespace std;
 
@@ -14,13 +29,13 @@ void addhead ()
 {
 	head= '\0';
 }
-int check ()
+Bool check ()
 {
 	if (head=='\0'){
-	return 1;
+	return true;
 	}
 	else{
-	return 0;
+	return false;
 	}
 }
 
@@ -47,7 +62,7 @@ title *help;
 					head=tmp;
 					help->temp = head;	
 						}
-	cout<<"inserted data"<<endl;
+	cout<<"----inserted data---- \n";
  } 	
  
  void addback(int data)
@@ -72,8 +87,10 @@ title *help;
 					help->temp = tmp;
 					tmp->temp = head;
 						
+				tmp->temp = head;
+						
 						}
-	cout<<"inserted data"<<endl;
+	cout<<"----inserted data---- \n";
  } 	
 
 void print ()
@@ -134,7 +151,7 @@ void rmvb()
 			int var;
 			clear = head;
 			if(head->temp == head){
-				head = NULL;
+				head = '\0';
 			}else{
 				help = head;
 				while(help->temp->temp != head){
@@ -170,10 +187,10 @@ int main()
 	{
 		cin>>num;
 		
-		addnumb(num); //no.1
+		addnumb(num);//no.1
 	}
-	 rmvfrnt(); // no.3
-	 rmvb(); //no.4
+	 //rmvfrnt(); // no.3
+	 //rmvb(); //no.4
 	 
 	
 	/*cout<<"bawah"<<endl;
