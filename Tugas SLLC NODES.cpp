@@ -162,7 +162,7 @@ void inputangka(){
 int main(){	
 	int n,num;
 	addhead();
-	
+	//================================================================//
 	cout<<"==Tambah Node Depan=="<<endl;		//Nomor 1
 	inputangka();
 	cin>>n;
@@ -173,6 +173,20 @@ int main(){
 	}
 	print();
 	cout<<endl<<endl;
-	
-	
+	//================================================================//
+	cout<<"==Tambah Node Belakang=="<<endl;		//Nomor 2
+	inputangka();
+	cin>>n;
+	for(int x=1;x<=n;x++)
+	{
+		cin>>num;	
+		addback(num);			
+	}
+	print();
+	cout<<endl<<endl;
+	//================================================================//
+	cout<<"==Hapus Node Depan=="<<endl;			//Nomor 3
+	rmvfrnt();
+	print();
+	cout<<endl<<endl;
 }
