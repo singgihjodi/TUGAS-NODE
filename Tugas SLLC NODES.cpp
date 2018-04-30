@@ -1,4 +1,10 @@
-//TUGAS-PETRUK-SLLC Dengan Head
+/*TUGAS-PETRUK-SLLC Dengan Head
+Nama kelompok :
+Singgih Jodi Prayoga 1717051013
+Wildan Mutaqin 1717051037
+Kasandra Cahyani 1717051027
+Putri Febriana 1717051022*/
+
 #include<iostream>
 using namespace std;
 
