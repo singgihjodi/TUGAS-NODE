@@ -1,36 +1,21 @@
-
-	
-							
-		
-				
-				 	
-				 	
-							
-					
-					
-					
-					
-					
-						
-							
-				//TUGAS-PETRUK-SLLC Dengan Head
+//TUGAS-PETRUK-SLLC Dengan Head
 #include<iostream>
 using namespace std;
 
 class title
 {	
-public :		//dont erase this,or it will be private class
-int num;
-title *temp;	
-
+	public :		//dont erase this,or it will be private class
+		int num;
+		title *temp;	
 };
+
 title *head;
-void addhead ()
-{
+
+void addhead (){
 	head= '\0';
 }
-bool check ()
-{
+
+bool check (){
 	if (head=='\0'){
 	return true;
 	}
@@ -135,7 +120,7 @@ void rmvfrnt()
 			{
 				head='\0';
 			}
-			cout<<"cleared"<<endl;
+			cout<<"Data Depan Telah Dihapus!"<<endl;
 	}
 		else 
 		{
@@ -162,45 +147,16 @@ void rmvb()
 				help->temp = head;
 				delete clear;
 			}
-			cout<<"deleted";
+			cout<<"Data Belakang Telah Dihapus!"<<endl;
 				} 	else 
 				  {
 		  	cout<<"empty"<<endl;
 		  		}
 	}
-
-
-
-
+	
 	
 
 
-int main()
-{	int n,num;
-	addhead();
-/*	addback(2);
-	addback(10);
-	addback(78); */
-	cout<<"how many insert data : ";
-	cin>>n;
-	for(int x=1;x<=n;x++)
-	{
-		cin>>num;
-		
-		addnumb(num);//no.1
-	}
-	 //rmvfrnt(); // no.3
-	 //rmvb(); //no.4
-	 
+int main(){	
 	
-	/*cout<<"bawah"<<endl;
-	for(int x=1;x<=n;x++)
-	{
-		cin>>num;
-		
-		addback(num); //no.2
-	} */
-	print();
-	
-	return 0;
 }
